@@ -1,0 +1,15 @@
+/* base.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    margin: 20px;
+}
+
+header, footer {
+    padding: 10px;
+    background-color: #f2f2f2;
+}
