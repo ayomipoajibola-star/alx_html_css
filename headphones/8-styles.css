@@ -924,3 +924,71 @@ button {
         padding: var(--spacing-xl) 0;
     }
     
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .result-pentagon {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .result-percentage {
+        font-size: 2.25rem;
+    }
+    
+    .result-icon {
+        font-size: 1.75rem;
+    }
+    
+    .result-description {
+        font-size: 0.85rem;
+    }
+    
+    /* Footer adjustments */
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* Additional Mobile Optimization */
+@media screen and (max-width: 320px) {
+    .hero-title {
+        font-size: 1.25rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .cta-button {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: 0.7rem;
+    }
+    
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .service-icon {
+        font-size: 3.5rem;
+        height: 3.5rem;
+    }
+    
+    .result-pentagon {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .result-percentage {
+        font-size: 2rem;
+    }
+}
