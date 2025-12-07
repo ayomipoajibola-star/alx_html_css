@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones - What We Do</title>
+    <link rel="stylesheet" href="1-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Holberton School Icons -->
+    <link rel="stylesheet" href="fonts/holberton_school-icon/style.css">
+</head>
+<body>
+    <!-- Main container for the entire page -->
+    <div class="container">
+        <!-- Header/Hero Section -->
+        <header class="hero-section">
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <div class="nav-container">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/logo_headphones.png" alt="Headphones Logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation Menu -->
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#" class="nav-link">what we do</a></li>
+                        <li class="nav-item"><a href="#what-we-do" class="nav-link">our results</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">contact us</a></li>
+                    </ul>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <div class="hamburger" id="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Lorem ipsum dolor set amet lorem ipsum</h1>
+                    <p class="hero-subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+                    
+                    <!-- Call to Action Button -->
+                    <div class="cta-container">
+                        <button class="cta-button">CALL TO ACTION</button>
+                    </div>
+                    
+                    <!-- Hero Description -->
+                    <div class="hero-description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- What We Do Section -->
+            <section class="what-we-do-section" id="what-we-do">
+                <div class="section-container">
+                    <!-- Section Header -->
+                    <div class="section-header">
+                        <h2 class="section-title">What we do...</h2>
+                        <p class="section-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                    
+                    <!-- Services Grid -->
+                    <div class="services-grid">
+                        <!-- Service Item 1 -->
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <span class="holberton_school-icon-ic_sound"></span>
+                            </div>
+                            <h3 class="service-title">Lorem ipsum</h3>
+                            <p class="service-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        
+                        <!-- Service Item 2 -->
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <span class="holberton_school-icon-ic_video"></span>
+                            </div>
+                            <h3 class="service-title">Lorem ipsum</h3>
+                            <p class="service-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        
+                        <!-- Service Item 3 -->
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <span class="holberton_school-icon-ic_music"></span>
+                            </div>
+                            <h3 class="service-title">Lorem ipsum</h3>
+                            <p class="service-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        
+                        <!-- Service Item 4 -->
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <span class="holberton_school-icon-ic_hearing"></span>
+                            </div>
+                            <h3 class="service-title">Lorem ipsum</h3>
+                            <p class="service-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script>
+        // Mobile menu toggle functionality
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            const hamburger = document.getElementById('hamburger');
+            
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navMenu = document.querySelector('.nav-menu');
+                    const hamburger = document.getElementById('hamburger');
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
